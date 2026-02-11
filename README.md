@@ -18,3 +18,24 @@ Lancer le projet :
 Bash
 pnpm run dev
 L'API sera accessible sur http://localhost:3000.
+
+
+erDiagram
+    GROUP ||--o{ VINYL : "possède"
+    
+    GROUP {
+        ObjectId _id
+        String name
+        String genre
+        String bio
+    }
+
+    VINYL {
+        ObjectId _id
+        ObjectId group_id
+        String title
+        Number release_date
+        String status
+        Number price
+        Number stock
+    }
